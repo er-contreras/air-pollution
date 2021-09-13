@@ -1,8 +1,11 @@
-import './App.css';
+import './styles/App.css';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Forecast from './pages/Forecast';
 import About from './pages/About';
+import fetchForecast from './components/apiManager';
+
+console.log(fetchForecast());
 
 function App() {
   return (

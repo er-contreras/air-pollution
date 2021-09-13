@@ -1,0 +1,18 @@
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.reference {
+  display: flex;
+  font-size: 2rem;
+}
+
+.mexico {
+  width: 10rem;
+  height: 10rem;
+  background-image: url('../america-latina.png');
+  background-repeat: no-repeat;
+  background-size: 10rem;
+}
