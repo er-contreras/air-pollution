@@ -5,7 +5,7 @@ const Forecast = () => {
     <div>
       <div id={styles.searchContainer}>
         <div>Forecast</div>
-        <input type="search"></input>
+        <input type="search" placeholder="air pollution" />
       </div>
       <div>
         <div className={styles.reference}>
@@ -13,6 +13,7 @@ const Forecast = () => {
           <h2>Latin American</h2>
         </div>
       </div>
+      <div className={styles.stats}>STATS BY COUNTRY</div>
     </div>
   )
 }
