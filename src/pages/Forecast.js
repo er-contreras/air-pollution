@@ -23,7 +23,7 @@ const Forecast = () => {
       <div>
         <div className={styles.reference}>
           <div className={styles.latinAmerica} />
-          <h2>Latin American</h2>
+          <h2>Latin American Air Pollution</h2>
         </div>
       </div>
 
