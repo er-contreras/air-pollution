@@ -5,6 +5,6 @@ const fetchForecast = async () => {
   const forecast = await response.json();
 
   return forecast;
-}
+};
 
 export default fetchForecast;
