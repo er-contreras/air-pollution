@@ -20,7 +20,7 @@
 .latinAmerica {
   width: 10rem;
   height: 10rem;
-  background-image: url('../america-latina.png');
+  background-image: url('../maps/america-latina.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 }
@@ -35,7 +35,7 @@
   font-size: 1rem;
   width: 10rem;
   height: 10rem;
-  background-image: url('../mexico.png');
+  background-image: url('../maps/mexico.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 }
@@ -45,7 +45,7 @@
   width: 10rem;
   height: 10rem;
   color: white;
-  background-image: url('../argentina.png');
+  background-image: url('../maps/argentina.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 }
@@ -55,7 +55,7 @@
   width: 10rem;
   height: 10rem;
   color: white;
-  background-image: url('../ec-04.png');
+  background-image: url('../maps/ec-04.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 }
@@ -65,7 +65,7 @@
   width: 10rem;
   height: 10rem;
   color: white;
-  background-image: url('../brazil.png');
+  background-image: url('../maps/brazil.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 }
