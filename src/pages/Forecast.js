@@ -12,17 +12,17 @@ const Forecast = () => {
     dispatch(getAQIThunk());
   }, []);
 
+  const showFilteredCountry = (id) => {
+    console.log('Almost there', id);
+  };
+
   const filterCountryByName = () => {
     const country = document.getElementById('input');
     console.log(country.value);
     if (country.value === 'Mexico') {
-      console.log('Hello');
+      showFilteredCountry(1);
     }
   };
-
-  // const showFilteredCountry = () => {
-
-  // }
 
   console.log(details.coord?.lon);
 
@@ -50,10 +50,10 @@ const Forecast = () => {
       <div id={styles.countries}>
         {countries.map((obj) => (
           <div
-            className={obj.index === 0 || obj.index === 3 || obj.index === 4
+            key={obj.id}
+            className={[0, 3, 4, 7].includes(obj.index)
               ? styles.countriesContainer
               : styles.countriesContainer2}
-            key={obj.id}
           >
             <img className={styles.country} alt={obj.country} src={obj.img} />
             <h2>{obj.country}</h2>
