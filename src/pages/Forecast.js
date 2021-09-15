@@ -2,22 +2,40 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '../styles/Forecast.module.css';
 import { getAQIThunk } from '../components/apiManager';
+import countries from '../components/countriesData';
 
 const Forecast = () => {
   const dispatch = useDispatch();
   const details = useSelector((store) => store.details);
 
-  console.log(details.coord);
-
   useEffect(() => {
     dispatch(getAQIThunk());
   }, []);
+
+  const filterCountryByName = () => {
+    const country = document.getElementById('input');
+    console.log(country.value);
+    if (country.value === 'Mexico') {
+      console.log('Hello');
+    }
+  };
+
+  // const showFilteredCountry = () => {
+
+  // }
+
+  console.log(details.coord?.lon);
 
   return (
     <div>
       <div id={styles.searchContainer}>
         <div>Air Pollution</div>
-        <input type="search" placeholder="by category" />
+        <input
+          id="input"
+          type="search"
+          placeholder="by category"
+          onChange={() => filterCountryByName()}
+        />
       </div>
 
       <div>
@@ -29,26 +47,18 @@ const Forecast = () => {
 
       <div className={styles.stats}>AIR POLLUTION INDEX BY COUNTRY</div>
 
-      <div id={styles.categories}>
-        <div className={styles.category}>
-          <div className={styles.mexico} />
-          <h2>Mexico</h2>
-        </div>
-
-        <div className={styles.category}>
-          <div className={styles.argentina} />
-          <h2>Argentina</h2>
-        </div>
-
-        <div className={styles.category}>
-          <div className={styles.ecuador} />
-          <h2>Ecuador</h2>
-        </div>
-
-        <div className={styles.category}>
-          <div className={styles.brazil} />
-          <h2>Brazil</h2>
-        </div>
+      <div id={styles.countries}>
+        {countries.map((obj) => (
+          <div
+            className={obj.index === 0 || obj.index === 3 || obj.index === 4
+              ? styles.countriesContainer
+              : styles.countriesContainer2}
+            key={obj.id}
+          >
+            <img className={styles.country} alt={obj.country} src={obj.img} />
+            <h2>{obj.country}</h2>
+          </div>
+        ))}
       </div>
     </div>
   );
