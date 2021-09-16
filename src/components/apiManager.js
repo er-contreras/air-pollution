@@ -13,7 +13,7 @@ const fetchForecast = async () => {
 export const getAQIThunk = () => (dispatch) => {
   fetchForecast().then((response) => {
     // dispatch(getDetails(Object.entries(response)));
-    dispatch(getDetails(response));
+    dispatch(getDetails(Object.entries(response)));
   });
 };
 

@@ -51,22 +51,29 @@ const Forecast = () => {
         {countries.map((obj) => {
           if (obj.country) {
             return (
-              <>
-                <a
-                  key={obj.id}
-                  href="http://localhost:3000/#/details"
-                  onClick={() => console.log('Hi htere!', obj.id)}
+              // <>
+              <a
+                key={obj.id}
+                href="http://localhost:3000/#/details"
+                onClick={() => {
+                  console.log(obj.img, obj.country);
+                  return obj.img;
+                }}
+              >
+                <div
+                  className={[0, 3, 4, 7].includes(obj.index)
+                    ? styles.countriesContainer
+                    : styles.countriesContainer2}
                 >
-                  <div
-                    className={[0, 3, 4, 7].includes(obj.index)
-                      ? styles.countriesContainer
-                      : styles.countriesContainer2}
-                  >
-                    <img className={styles.country} alt={obj.country} src={obj.img} />
-                    <h2>{obj.country}</h2>
-                  </div>
-                </a>
-              </>
+                  <img
+                    className={styles.country}
+                    alt={obj.country}
+                    src={obj.img}
+                  />
+                  <h2>{obj.country}</h2>
+                </div>
+              </a>
+              // </>
             );
           }
           return false;

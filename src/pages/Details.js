@@ -1,20 +1,30 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { getAQIThunk } from '../components/apiManager';
 // import countries from '../components/countriesData';
 
 const Details = () => {
+  const dispatch = useDispatch();
   const details = useSelector((store) => store.details);
+  // const coordenates = details.coord;
+
+  useEffect(() => {
+    dispatch(getAQIThunk());
+  }, []);
+
   console.log(details);
 
   return (
-    <>
-      {/* {details.map((obj) => ( */}
-      <div key={1}>
-        <div>Details page</div>
-        <div>DETAILS</div>
-        {/* <div>{obj.list}</div> */}
-      </div>
-      {/* ))} */}
-    </>
+    <div>
+      {details.map((obj) => (
+        <ul key={uuidv4()}>
+          <li>Details page</li>
+          <li>DETAILS</li>
+          <li>{obj.coord}</li>
+        </ul>
+      ))}
+    </div>
   );
 };
 
