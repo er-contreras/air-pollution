@@ -1,0 +1,20 @@
+#components {
+  background-color: rgb(225, 225, 225);
+}
+
+#components li {
+  background-color: rgb(65, 106, 175);
+  color: rgb(229, 229, 229);
+}
+
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.componentsDescript {
+  background-color: rgb(52, 84, 138);
+  color: white;
+  padding: 0.3rem;
+}

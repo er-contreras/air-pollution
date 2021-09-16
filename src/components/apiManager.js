@@ -12,7 +12,6 @@ const fetchForecast = async () => {
 // Apply the middleware
 export const getAQIThunk = () => (dispatch) => {
   fetchForecast().then((response) => {
-    // dispatch(getDetails(Object.entries(response)));
     dispatch(getDetails(Object.entries(response)));
   });
 };

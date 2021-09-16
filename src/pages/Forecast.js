@@ -24,7 +24,7 @@ const Forecast = () => {
     }
   };
 
-  console.log(details.coord?.lon);
+  console.log(details[1]?.[1][0].components);
 
   return (
     <div>
@@ -51,7 +51,6 @@ const Forecast = () => {
         {countries.map((obj) => {
           if (obj.country) {
             return (
-              // <>
               <a
                 key={obj.id}
                 href="http://localhost:3000/#/details"
@@ -73,7 +72,6 @@ const Forecast = () => {
                   <h2>{obj.country}</h2>
                 </div>
               </a>
-              // </>
             );
           }
           return false;
