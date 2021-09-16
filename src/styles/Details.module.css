@@ -1,5 +1,7 @@
 #components {
-  background-color: rgb(225, 225, 225);
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 #components li {
@@ -17,4 +19,22 @@
   background-color: rgb(52, 84, 138);
   color: white;
   padding: 0.3rem;
+}
+
+.keys,
+.values {
+  font-size: 2rem;
+}
+
+.keys {
+  font-family: sans-serif;
+}
+
+.values {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.key,
+.value {
+  padding: 2rem;
 }

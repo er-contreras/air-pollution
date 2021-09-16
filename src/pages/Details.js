@@ -8,13 +8,10 @@ import styles from '../styles/Details.module.css';
 const Details = () => {
   const dispatch = useDispatch();
   const details = useSelector((store) => store.details);
-  // const coordenates = details.coord;
 
   useEffect(() => {
     dispatch(getAQIThunk());
   }, []);
-
-  // console.log(details[1]?.[1][0].components);
 
   return (
     <div>
@@ -30,21 +27,23 @@ const Details = () => {
       <div>Selected Country</div>
       <div className={styles.componentsDescript}> Air Pollution Components</div>
 
-      {/* {Object.values(details[1][1]).map((arr) => ( */}
       {details[1]?.[1].map((arr) => {
         const components = Object.keys(arr.components);
         const values = Object.values(arr.components);
-        console.log(values);
 
         return (
           <ul id={styles.components} key={uuidv4()}>
-            {components.map((component) => (
-              <li key={uuidv4()}>{component}</li>
-            ))}
+            <div className={styles.keys}>
+              {components.map((component) => (
+                <li className={styles.key} key={uuidv4()}>{component}</li>
+              ))}
+            </div>
 
-            {values.map((value) => (
-              <li key={uuidv4()}>{value}</li>
-            ))}
+            <div className={styles.values}>
+              {values.map((value) => (
+                <li className={styles.value} key={uuidv4()}>{value}</li>
+              ))}
+            </div>
           </ul>
         );
       })}
