@@ -48,17 +48,29 @@ const Forecast = () => {
       <div className={styles.stats}>AIR POLLUTION INDEX BY COUNTRY</div>
 
       <div id={styles.countries}>
-        {countries.map((obj) => (
-          <div
-            key={obj.id}
-            className={[0, 3, 4, 7].includes(obj.index)
-              ? styles.countriesContainer
-              : styles.countriesContainer2}
-          >
-            <img className={styles.country} alt={obj.country} src={obj.img} />
-            <h2>{obj.country}</h2>
-          </div>
-        ))}
+        {countries.map((obj) => {
+          if (obj.country) {
+            return (
+              <>
+                <a
+                  key={obj.id}
+                  href="http://localhost:3000/#/details"
+                  onClick={() => console.log('Hi htere!', obj.id)}
+                >
+                  <div
+                    className={[0, 3, 4, 7].includes(obj.index)
+                      ? styles.countriesContainer
+                      : styles.countriesContainer2}
+                  >
+                    <img className={styles.country} alt={obj.country} src={obj.img} />
+                    <h2>{obj.country}</h2>
+                  </div>
+                </a>
+              </>
+            );
+          }
+          return false;
+        })}
       </div>
     </div>
   );
