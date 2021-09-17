@@ -24,7 +24,6 @@ const Details = () => {
           id="input"
           type="search"
           placeholder="by component"
-        // onChange={() => filterCountryByName()}
         />
         <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
         <FontAwesomeIcon className={styles.cog} icon={faCog} />

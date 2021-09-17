@@ -9,7 +9,7 @@ const fetchForecast = async () => {
   return details;
 };
 
-// Apply the middleware
+// Apply the middleware.
 export const getAQIThunk = () => (dispatch) => {
   fetchForecast().then((response) => {
     dispatch(getDetails(Object.entries(response)));

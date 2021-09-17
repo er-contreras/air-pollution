@@ -2,6 +2,7 @@ import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styles from '../styles/Forecast.module.css';
 import { getAQIThunk } from '../components/apiManager';
 import countries from '../components/countriesData';
@@ -55,9 +56,10 @@ const Forecast = () => {
 
       <div id={styles.countries}>
         {search(countries).map((obj) => (
-          <a
+          <Link
             key={obj.id}
-            href="http://localhost:3000/#/details"
+            // href="http://localhost:3000/#/details"
+            to="/details"
             onClick={() => {
               console.log(obj.img, obj.country);
               return obj.img;
@@ -75,7 +77,7 @@ const Forecast = () => {
               />
               <h2>{obj.country}</h2>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
