@@ -1,12 +1,7 @@
 #components {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style-type: none;
-}
-
-#components li {
-  background-color: rgb(65, 106, 175);
-  color: rgb(229, 229, 229);
 }
 
 #searchContainer {
@@ -23,32 +18,6 @@
   padding: 0.3rem;
 }
 
-.keys,
-.values {
-  font-size: 2rem;
-}
-
-.keys {
-  font-family: sans-serif;
-  padding: 0 5rem 0 0;
-}
-
-.values {
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0 0 0 5rem;
-}
-
-.key,
-.value {
-  padding: 2rem;
-}
-
-.key2,
-.value {
-  background-color: rgb(62, 100, 165);
-  padding: 2rem;
-}
-
 .arrow {
   font-size: 2rem;
   color: white;
@@ -57,4 +26,15 @@
 
 a {
   text-decoration: none;
+}
+
+#keys,
+#values {
+  width: 50%;
+  font-size: 2rem;
+  color: white;
+}
+
+#values {
+  font-family: 'Courier New', Courier, monospace;
 }
