@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { faChevronLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAQIThunk } from '../components/apiManager';
 import styles from '../styles/Details.module.css';
-// import countries from '../components/countriesData';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Details = () => {
     <div>
       <div id={styles.searchContainer}>
         <a href="http://localhost:3000/#/">
-          <div className={styles.arrow}>v</div>
+          <FontAwesomeIcon className={styles.arrow} icon={faChevronLeft} />
         </a>
         <input
           id="input"
@@ -25,6 +26,9 @@ const Details = () => {
           placeholder="by component"
         // onChange={() => filterCountryByName()}
         />
+        <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
+        <FontAwesomeIcon className={styles.cog} icon={faCog} />
+
       </div>
       <div>Selected Country</div>
       <div className={styles.componentsDescript}> Air Pollution Components</div>

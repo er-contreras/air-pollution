@@ -1,3 +1,5 @@
+import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '../styles/Forecast.module.css';
@@ -36,6 +38,8 @@ const Forecast = () => {
           placeholder="by category"
           onChange={() => filterCountryByName()}
         />
+        <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
+        <FontAwesomeIcon className={styles.cog} icon={faCog} />
       </div>
 
       <div>

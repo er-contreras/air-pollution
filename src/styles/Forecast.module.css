@@ -83,3 +83,10 @@ a {
   display: flex;
   max-width: 50%;
 }
+
+.micro,
+.cog {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: white;
+}

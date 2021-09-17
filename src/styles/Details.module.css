@@ -18,10 +18,11 @@
   padding: 0.3rem;
 }
 
-.arrow {
-  font-size: 2rem;
+.arrow,
+.micro,
+.cog {
+  font-size: 1.5rem;
   color: white;
-  transform: rotate(90deg);
 }
 
 a {
