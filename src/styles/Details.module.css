@@ -1,6 +1,6 @@
 #components {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style-type: none;
 }
 
@@ -12,7 +12,9 @@
 #searchContainer {
   display: flex;
   justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 0.4rem;
 }
 
 .componentsDescript {
@@ -28,13 +30,31 @@
 
 .keys {
   font-family: sans-serif;
+  padding: 0 5rem 0 0;
 }
 
 .values {
   font-family: 'Courier New', Courier, monospace;
+  padding: 0 0 0 5rem;
 }
 
 .key,
 .value {
   padding: 2rem;
+}
+
+.key2,
+.value {
+  background-color: rgb(62, 100, 165);
+  padding: 2rem;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: white;
+  transform: rotate(90deg);
+}
+
+a {
+  text-decoration: none;
 }

@@ -16,11 +16,13 @@ const Details = () => {
   return (
     <div>
       <div id={styles.searchContainer}>
-        <div>Air Pollution</div>
+        <a href="http://localhost:3000/#/">
+          <div className={styles.arrow}>v</div>
+        </a>
         <input
           id="input"
           type="search"
-          placeholder="by category"
+          placeholder="by component"
         // onChange={() => filterCountryByName()}
         />
       </div>
@@ -34,9 +36,20 @@ const Details = () => {
         return (
           <ul id={styles.components} key={uuidv4()}>
             <div className={styles.keys}>
-              {components.map((component) => (
-                <li className={styles.key} key={uuidv4()}>{component}</li>
-              ))}
+              {components.map((component, i) => {
+                const id = document.getElementById('0');
+                return (
+                  <li
+                    id={i}
+                    key={uuidv4()}
+                    className={i === id
+                      ? styles.key
+                      : styles.key2}
+                  >
+                    {component}
+                  </li>
+                );
+              })}
             </div>
 
             <div className={styles.values}>
