@@ -1,17 +1,17 @@
 import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react'; // eslint-disable-line
+// import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Forecast.module.css';
-import { getAQIThunk } from '../components/apiManager';
+// import { getAQIThunk } from '../components/apiManager';
 import countries from '../components/countriesData';
 
 const Forecast = () => {
-  const dispatch = useDispatch();
-  const details = useSelector((store) => store.details); //eslint-disable-line
+  // const dispatch = useDispatch();
+  // const details = useSelector((store) => store.details); //eslint-disable-line
 
-  const [q, setQ] = useState('');
+  const [searchBar, setSearchBar] = useState('');
 
   const [searchParam] = useState(['country']);
 
@@ -21,14 +21,14 @@ const Forecast = () => {
         item[newItem]
           .toString()
           .toLowerCase()
-          .indexOf(q.toLowerCase()) > -1
+          .indexOf(searchBar.toLowerCase()) > -1
       ))
     ));
   }
 
-  useEffect(() => {
-    dispatch(getAQIThunk());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getAQIThunk());
+  // }, []);
 
   return (
     <div>
@@ -38,8 +38,8 @@ const Forecast = () => {
           id="input"
           type="search"
           placeholder="by category"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
+          value={searchBar}
+          onChange={(e) => setSearchBar(e.target.value)}
         />
         <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
         <FontAwesomeIcon className={styles.cog} icon={faCog} />
@@ -58,10 +58,13 @@ const Forecast = () => {
         {search(countries).map((obj) => (
           <Link
             key={obj.id}
-            to="/details"
-            onClick={() => {
-              console.log(obj.img, obj.country);
-              return obj.img;
+            to={{
+              pathname: '/details',
+              state: {
+                img: obj.img,
+                name: obj.country,
+                coord: obj.coord,
+              },
             }}
           >
             <div

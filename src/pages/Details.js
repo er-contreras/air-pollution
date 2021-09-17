@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { faChevronLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getAQIThunk } from '../components/apiManager';
 import styles from '../styles/Details.module.css';
 
@@ -11,8 +11,12 @@ const Details = () => {
   const dispatch = useDispatch();
   const details = useSelector((store) => store.details);
 
+  const location = useLocation();
+  const frontEnd = location.state;
+  const { coord } = frontEnd;
+
   useEffect(() => {
-    dispatch(getAQIThunk());
+    dispatch(getAQIThunk(coord.lat, coord.lon));
   }, []);
 
   return (
@@ -30,7 +34,10 @@ const Details = () => {
         <FontAwesomeIcon className={styles.cog} icon={faCog} />
 
       </div>
-      <div>Selected Country</div>
+      <div className={styles.country}>
+        <img className={styles.map} src={frontEnd.img} alt="country" />
+        <h2>{frontEnd.name}</h2>
+      </div>
       <div className={styles.componentsDescript}> Air Pollution Components</div>
 
       {details[1]?.[1].map((arr) => {

@@ -13,6 +13,10 @@ const countries = [
     img: mexico,
     className: 'mexico',
     index: 0,
+    coord: {
+      lat: 19.432608,
+      lon: -99.133209,
+    },
   },
   {
     country: 'Argentina',
@@ -20,6 +24,10 @@ const countries = [
     img: argentina,
     className: 'argentina',
     index: 1,
+    coord: {
+      lat: -34.603683,
+      lon: -58.381557,
+    },
   },
   {
     country: 'Ecuador',
@@ -27,6 +35,10 @@ const countries = [
     img: ecuador,
     className: 'ecuador',
     index: 2,
+    coord: {
+      lat: -0.180653,
+      lon: -78.467834,
+    },
   },
   {
     country: 'Brazil',
@@ -34,6 +46,10 @@ const countries = [
     img: brazil,
     className: 'brazil',
     index: 3,
+    coord: {
+      lat: -15.826691,
+      lon: -47.921822,
+    },
   },
   {
     country: 'Panama',
@@ -41,6 +57,10 @@ const countries = [
     img: panama,
     className: 'panama',
     index: 4,
+    coord: {
+      lat: 8.9824,
+      lon: -79.5199,
+    },
   },
   {
     country: 'Costa Rica',
@@ -48,6 +68,10 @@ const countries = [
     img: costaRica,
     className: 'costaRica',
     index: 5,
+    coord: {
+      lat: 9.9281,
+      lon: 84.0907,
+    },
   },
 ];
 

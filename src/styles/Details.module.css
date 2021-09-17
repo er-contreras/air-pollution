@@ -39,3 +39,16 @@ a {
 #values {
   font-family: 'Courier New', Courier, monospace;
 }
+
+.map {
+  width: 10rem;
+}
+
+.country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
