@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { faChevronLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import { getAQIThunk } from '../components/apiManager';
 import styles from '../styles/Details.module.css';
 
@@ -17,9 +18,9 @@ const Details = () => {
   return (
     <div>
       <div id={styles.searchContainer}>
-        <a href="http://localhost:3000/#/">
+        <Link to="/">
           <FontAwesomeIcon className={styles.arrow} icon={faChevronLeft} />
-        </a>
+        </Link>
         <input
           id="input"
           type="search"

@@ -58,7 +58,6 @@ const Forecast = () => {
         {search(countries).map((obj) => (
           <Link
             key={obj.id}
-            // href="http://localhost:3000/#/details"
             to="/details"
             onClick={() => {
               console.log(obj.img, obj.country);
