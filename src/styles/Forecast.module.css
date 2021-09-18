@@ -62,6 +62,11 @@
   padding: 0 0 2rem 0;
 }
 
+.countriesContainer,
+.countriesContainer2 {
+  min-height: 20rem;
+}
+
 .countriesContainer {
   display: flex;
   flex-direction: column;
@@ -110,6 +115,7 @@
 .countryImg {
   display: flex;
   justify-content: center;
+  min-width: 50%;
 }
 
 .coord {
@@ -117,7 +123,13 @@
   flex-direction: column;
 }
 
-.coord div {
+.coord div,
+.capital div {
   display: flex;
   justify-content: flex-end;
+}
+
+.capital {
+  display: flex;
+  flex-direction: column;
 }

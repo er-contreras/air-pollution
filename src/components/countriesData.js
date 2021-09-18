@@ -9,6 +9,7 @@ import costaRica from '../maps/costaRica.png';
 const countries = [
   {
     country: 'Mexico',
+    capital: 'Mexico City',
     id: uuidv4(),
     img: mexico,
     className: 'mexico',
@@ -20,6 +21,7 @@ const countries = [
   },
   {
     country: 'Argentina',
+    capital: 'Buenos Aires',
     id: uuidv4(),
     img: argentina,
     className: 'argentina',
@@ -31,6 +33,7 @@ const countries = [
   },
   {
     country: 'Ecuador',
+    capital: 'Quito',
     id: uuidv4(),
     img: ecuador,
     className: 'ecuador',
@@ -42,6 +45,7 @@ const countries = [
   },
   {
     country: 'Brazil',
+    capital: 'Brasilia',
     id: uuidv4(),
     img: brazil,
     className: 'brazil',
@@ -53,6 +57,7 @@ const countries = [
   },
   {
     country: 'Panama',
+    capital: 'Panama City',
     id: uuidv4(),
     img: panama,
     className: 'panama',
@@ -64,6 +69,7 @@ const countries = [
   },
   {
     country: 'Costa Rica',
+    capital: 'San Jose',
     id: uuidv4(),
     img: costaRica,
     className: 'costaRica',

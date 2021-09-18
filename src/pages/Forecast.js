@@ -78,10 +78,13 @@ const Forecast = () => {
                     </div>
                   </div>
                   <div>
-                    <h2>{obj.country}</h2>
+                    <h2 className={styles.capital}>
+                      <div>{obj.country}</div>
+                      <div>{`(${obj.capital})`}</div>
+                    </h2>
                     <div className={styles.coord}>
-                      <div>{obj.coord.lat}</div>
-                      <div>{obj.coord.lon}</div>
+                      <div>{`Lat : ${obj.coord.lat}`}</div>
+                      <div>{`Lon : ${obj.coord.lon}`}</div>
                     </div>
                   </div>
                 </div>
