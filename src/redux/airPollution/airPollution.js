@@ -9,7 +9,7 @@ export const getDetails = (payload) => ({
 const initialData = [];
 
 const reducer = (state = initialData, action) => {
-  // console.log(action.payload);
+  console.log(action.payload);
   switch (action.type) {
     case GET_DETAILS:
       return action.payload;

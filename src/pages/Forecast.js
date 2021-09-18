@@ -1,7 +1,8 @@
 import { faMicrophone, faCog, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { HashRouter as Router, Link } from 'react-router-dom';
 import styles from '../styles/Forecast.module.css';
 import countries from '../components/countriesData';
 
@@ -49,41 +50,44 @@ const Forecast = () => {
 
       <div id={styles.countries}>
         {search(countries).map((obj) => (
-          <Link
-            key={obj.id}
-            to={{
-              pathname: '/details',
-              state: {
-                img: obj.img,
-                name: obj.country,
-                coord: obj.coord,
-              },
-            }}
-          >
-            <div
-              className={[0, 3, 4, 7].includes(obj.index)
-                ? styles.countriesContainer
-                : styles.countriesContainer2}
-            >
-              <div className={styles.countryImg}>
-                <img
-                  className={styles.country}
-                  alt={obj.country}
-                  src={obj.img}
-                />
-                <div className={styles.circleRight}>
-                  <FontAwesomeIcon icon={faArrowAltCircleRight} />
+          <div className={styles.container} key={uuidv4()}>
+            <Router>
+              <Link
+                to={{
+                  pathname: '/details',
+                  state: {
+                    img: obj.img,
+                    name: obj.country,
+                    coord: obj.coord,
+                  },
+                }}
+              >
+                <div
+                  className={[0, 3, 4, 7].includes(obj.index)
+                    ? styles.countriesContainer
+                    : styles.countriesContainer2}
+                >
+                  <div className={styles.countryImg}>
+                    <img
+                      className={styles.country}
+                      alt={obj.country}
+                      src={obj.img}
+                    />
+                    <div className={styles.circleRight}>
+                      <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                    </div>
+                  </div>
+                  <div>
+                    <h2>{obj.country}</h2>
+                    <div className={styles.coord}>
+                      <div>{obj.coord.lat}</div>
+                      <div>{obj.coord.lon}</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h2>{obj.country}</h2>
-                <div className={styles.coord}>
-                  <div>{obj.coord.lat}</div>
-                  <div>{obj.coord.lon}</div>
-                </div>
-              </div>
-            </div>
-          </Link>
+              </Link>
+            </Router>
+          </div>
         ))}
       </div>
     </div>

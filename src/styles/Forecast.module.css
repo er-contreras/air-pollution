@@ -95,7 +95,7 @@
   width: 20rem;
 }
 
-a {
+.container {
   display: flex;
   max-width: 50%;
 }

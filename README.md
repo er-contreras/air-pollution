@@ -4,7 +4,10 @@
 
 > Build air pollution mobile app with React and Redux.
 
-<!-- <div align="center"><img src="./BookStore.png" width="400"/></div> -->
+<div align="center">
+<img src="./Home.png" width="320"/>
+<img src="./details.png" width="320"/>
+</div>
 
 Mobile ScreenShots
 
