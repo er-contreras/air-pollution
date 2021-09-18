@@ -1,16 +1,11 @@
 import { faMicrophone, faCog, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react'; // eslint-disable-line
-// import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Forecast.module.css';
-// import { getAQIThunk } from '../components/apiManager';
 import countries from '../components/countriesData';
 
 const Forecast = () => {
-  // const dispatch = useDispatch();
-  // const details = useSelector((store) => store.details); //eslint-disable-line
-
   const [searchBar, setSearchBar] = useState('');
 
   const [searchParam] = useState(['country']);
@@ -26,10 +21,6 @@ const Forecast = () => {
     ));
   }
 
-  // useEffect(() => {
-  //   dispatch(getAQIThunk());
-  // }, []);
-
   return (
     <div>
       <div id={styles.searchContainer}>
@@ -37,7 +28,7 @@ const Forecast = () => {
         <input
           id={styles.input}
           type="search"
-          placeholder="by country"
+          placeholder="By Country..."
           value={searchBar}
           onChange={(e) => setSearchBar(e.target.value)}
         />

@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { faChevronLeft, faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronLeft, faMicrophone, faCog, faArrowAltCircleRight,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
 import { getAQIThunk } from '../components/apiManager';
@@ -28,7 +30,7 @@ const Details = () => {
         <input
           id={styles.input}
           type="search"
-          placeholder="components"
+          placeholder="Components"
         />
         <div className={styles.icons}>
           <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
@@ -65,24 +67,30 @@ const Details = () => {
                 {time.toDateString()}
               </span>
             </div>
+
             <div id={styles.components} key={uuidv4()}>
               <div id={styles.keys}>
                 {keys.map((key) => (
-                  <li
-                    key={uuidv4()}
-                  >
-                    {key}
-                  </li>
+                  <div className={styles.keys} key={uuidv4()}>
+                    <li
+                      key={uuidv4()}
+                    >
+                      {key}
+                    </li>
+                  </div>
                 ))}
               </div>
 
               <div id={styles.values}>
                 {values.map((value) => (
-                  <li
-                    key={uuidv4()}
-                  >
-                    {value}
-                  </li>
+                  <div className={styles.values} key={uuidv4()}>
+                    <li
+                      key={uuidv4()}
+                    >
+                      {value}
+                    </li>
+                    <FontAwesomeIcon className={styles.rightArrow} icon={faArrowAltCircleRight} />
+                  </div>
                 ))}
               </div>
             </div>
