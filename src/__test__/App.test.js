@@ -12,9 +12,9 @@ test('renders learn react link', () => {
         />
         <h2>Mexico</h2>
       </div>
-    </a>
+    </a>,
   );
 
-  userEvent.click(screen.getByText('Mexico'))
-  expect(screen.getByText('Mexico')).toBeInTheDocument()
+  userEvent.click(screen.getByText('Mexico'));
+  expect(screen.getByText('Mexico')).toBeInTheDocument();
 });

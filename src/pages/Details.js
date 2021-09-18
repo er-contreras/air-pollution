@@ -45,7 +45,6 @@ const Details = () => {
         const date = arr.dt;
         const time = new Date(date * 1000);
 
-        console.log(aqi);
         return (
           <div key={uuidv4()}>
             <div className={styles.country}>

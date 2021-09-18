@@ -68,7 +68,6 @@ a {
 }
 
 .country {
-  justify-content: center;
   align-items: center;
   color: white;
   justify-content: space-around;
@@ -103,7 +102,6 @@ a {
 .values:nth-child(even) {
   background-color: rgb(62, 100, 165);
 }
-
 
 .values li {
   margin: 0 4rem 0 0;
