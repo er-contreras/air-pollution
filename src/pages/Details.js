@@ -26,44 +26,65 @@ const Details = () => {
           <FontAwesomeIcon className={styles.arrow} icon={faChevronLeft} />
         </Link>
         <input
-          id="input"
+          id={styles.input}
           type="search"
-          placeholder="by component"
+          placeholder="components"
         />
-        <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
-        <FontAwesomeIcon className={styles.cog} icon={faCog} />
-
+        <div className={styles.icons}>
+          <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
+          <FontAwesomeIcon className={styles.cog} icon={faCog} />
+        </div>
       </div>
-      <div className={styles.country}>
-        <img className={styles.map} src={frontEnd.img} alt="country" />
-        <h2>{frontEnd.name}</h2>
-      </div>
-      <div className={styles.componentsDescript}> Air Pollution Components</div>
 
       {details[1]?.[1].map((arr) => {
         const keys = Object.keys(arr.components);
         const values = Object.values(arr.components);
+        const { aqi } = arr.main;
+        const date = arr.dt;
+        const time = new Date(date * 1000);
 
+        console.log(aqi);
         return (
-          <div id={styles.components} key={uuidv4()}>
-            <div id={styles.keys}>
-              {keys.map((key) => (
-                <li
-                  key={uuidv4()}
-                >
-                  {key}
-                </li>
-              ))}
+          <div key={uuidv4()}>
+            <div className={styles.country}>
+              <img className={styles.map} src={frontEnd.img} alt="country" />
+              <div>
+                <h2>{frontEnd.name}</h2>
+                <h3>
+                  Air Quality index
+                  <span>{`(${aqi})`}</span>
+                </h3>
+              </div>
             </div>
+            <div
+              className={styles.componentsDescript}
+            >
+              Air Pollution Components
+              <span>
+                -
+                {time.toDateString()}
+              </span>
+            </div>
+            <div id={styles.components} key={uuidv4()}>
+              <div id={styles.keys}>
+                {keys.map((key) => (
+                  <li
+                    key={uuidv4()}
+                  >
+                    {key}
+                  </li>
+                ))}
+              </div>
 
-            <div id={styles.values}>
-              {values.map((value) => (
-                <li
-                  key={uuidv4()}
-                >
-                  {value}
-                </li>
-              ))}
+              <div id={styles.values}>
+                {values.map((value) => (
+                  <li
+                    key={uuidv4()}
+                  >
+                    {value}
+                  </li>
+                ))}
+              </div>
             </div>
           </div>
         );

@@ -12,10 +12,26 @@
   padding: 0.4rem;
 }
 
+#input {
+  text-align: center;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+}
+
+::placeholder {
+  color: rgba(236, 236, 236, 0.792);
+}
+
 .componentsDescript {
   background-color: rgb(52, 84, 138);
   color: white;
   padding: 0.3rem;
+}
+
+.componentsDescript span {
+  margin: 0 0 0 1rem;
 }
 
 .arrow,
@@ -51,4 +67,14 @@ a {
   color: white;
   justify-content: space-around;
   margin: 2rem 0;
+}
+
+.country h2 {
+  font-size: 3rem;
+}
+
+.icons {
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
 }

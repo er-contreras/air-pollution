@@ -1,4 +1,4 @@
-import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faCog, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react'; // eslint-disable-line
 // import { useSelector, useDispatch } from 'react-redux';
@@ -33,16 +33,18 @@ const Forecast = () => {
   return (
     <div>
       <div id={styles.searchContainer}>
-        <div>Air Pollution</div>
+        <div>Current Air Pollution</div>
         <input
-          id="input"
+          id={styles.input}
           type="search"
-          placeholder="by category"
+          placeholder="by country"
           value={searchBar}
           onChange={(e) => setSearchBar(e.target.value)}
         />
-        <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
-        <FontAwesomeIcon className={styles.cog} icon={faCog} />
+        <div>
+          <FontAwesomeIcon className={styles.micro} icon={faMicrophone} />
+          <FontAwesomeIcon className={styles.cog} icon={faCog} />
+        </div>
       </div>
 
       <div>
@@ -72,12 +74,23 @@ const Forecast = () => {
                 ? styles.countriesContainer
                 : styles.countriesContainer2}
             >
-              <img
-                className={styles.country}
-                alt={obj.country}
-                src={obj.img}
-              />
-              <h2>{obj.country}</h2>
+              <div className={styles.countryImg}>
+                <img
+                  className={styles.country}
+                  alt={obj.country}
+                  src={obj.img}
+                />
+                <div className={styles.circleRight}>
+                  <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                </div>
+              </div>
+              <div>
+                <h2>{obj.country}</h2>
+                <div className={styles.coord}>
+                  <div>{obj.coord.lat}</div>
+                  <div>{obj.coord.lon}</div>
+                </div>
+              </div>
             </div>
           </Link>
         ))}
