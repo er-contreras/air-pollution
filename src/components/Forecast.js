@@ -1,17 +1,12 @@
 import { faMicrophone, faCog, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { v4 as uuidv4 } from 'uuid';
-import { useEffect, useState } from 'react'; // eslint-disable-line
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'; // eslint-disable-line
-// import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/Forecast.module.css';
 import countries from './countriesData';
-// import { addCountries } from '../redux/airPollution/airPollution';
 
 const Forecast = () => {
-  // const dispatch = useDispatch();
-  // const countriesList = useSelector((state) => state.countries);
-
   const [searchBar, setSearchBar] = useState('');
   const [searchParam] = useState(['country']);
 
@@ -25,12 +20,6 @@ const Forecast = () => {
       ))
     ));
   }
-
-  // useEffect(() => {
-  //   if (countriesList.length === 0) {
-  //     dispatch(addCountries());
-  //   }
-  // }, []);
 
   return (
     <div>

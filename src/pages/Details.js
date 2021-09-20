@@ -17,8 +17,6 @@ const Details = () => {
   const frontEnd = location.state;
   const { coord } = frontEnd;
 
-  console.log(frontEnd);
-
   useEffect(() => {
     dispatch(getAQIThunk(coord.lat, coord.lon));
   }, []);
