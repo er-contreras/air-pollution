@@ -2,10 +2,10 @@ import { faMicrophone, faCog, faArrowAltCircleRight } from '@fortawesome/free-so
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { v4 as uuidv4 } from 'uuid';
 import { useEffect, useState } from 'react'; // eslint-disable-line
-import { HashRouter as Router, Link } from 'react-router-dom'; // eslint-disable-line
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'; // eslint-disable-line
 // import { useDispatch, useSelector } from 'react-redux';
 import styles from '../styles/Forecast.module.css';
-import countries from '../components/countriesData';
+import countries from './countriesData';
 // import { addCountries } from '../redux/airPollution/airPollution';
 
 const Forecast = () => {
@@ -61,7 +61,6 @@ const Forecast = () => {
       <div id={styles.countries}>
         {search(countries).map((obj) => (
           <div className={styles.container} key={uuidv4()}>
-            {/* <Router> */}
             <Link
               to={{
                 pathname: '/details',
@@ -99,7 +98,6 @@ const Forecast = () => {
                 </div>
               </div>
             </Link>
-            {/* </Router> */}
           </div>
         ))}
       </div>
