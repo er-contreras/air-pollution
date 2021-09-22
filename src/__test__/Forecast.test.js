@@ -1,24 +1,21 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Forecast from '../components/Forecast';
 import { HashRouter, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import userEvent from '@testing-library/user-event';
+import Forecast from '../components/Forecast';
 
-const MockForecast = () => {
-  return (
-    <HashRouter>
-      <Forecast />
-    </HashRouter>
-  )
-}
+const MockForecast = () => (
+  <HashRouter>
+    <Forecast />
+  </HashRouter>
+);
 
-const mockSetSearchBar = jest.fn()
+const mockSetSearchBar = jest.fn();
 
 describe('Test and Render "Forecast" component', () => {
   describe('Unit Test', () => {
-
     it('Look for String "Current Air Pollution in the component"', () => {
       render(<MockForecast />);
       const title = screen.getByText(/Current Air Pollution/i);
@@ -40,15 +37,15 @@ describe('Test and Render "Forecast" component', () => {
     it('should render input element', () => {
       render(
         <MockForecast
-          searchBar={''}
+          searchBar=""
           setSearchBar={mockSetSearchBar}
-        />
-      )
+        />,
+      );
       const inputElement = screen.getByPlaceholderText(/By Country.../i);
-      fireEvent.change(inputElement, { target: { value: "Mexico" } })
-      expect(inputElement.value).toBe("Mexico");
-    })
-  })
+      fireEvent.change(inputElement, { target: { value: 'Mexico' } });
+      expect(inputElement.value).toBe('Mexico');
+    });
+  });
 
   describe('Integration test', () => {
     it('Should redirect and update history', () => {
@@ -56,23 +53,24 @@ describe('Test and Render "Forecast" component', () => {
       render(
         <Router history={history}>
           <Forecast />
-        </Router>
-      )
-      userEvent.click(screen.getByTestId('link-0'))
-      expect(history.location.pathname).toEqual('/details')
-    })
+        </Router>,
+      );
+      userEvent.click(screen.getByTestId('link-0'));
+      expect(history.location.pathname).toEqual('/details');
+    });
 
     it('Should redirect and update dom', () => {
       const history = createMemoryHistory();
+      const state = { state2: { name: 'Mexico' } };
+      history.push(state);
+
       render(
         <Router history={history}>
           <Forecast />
-        </Router>
-      )
-      userEvent.click(screen.getByTestId('link-0'))
-      expect(history.location.state.name).toEqual('Mexico')
-    })
-  })
-})
-
-
+        </Router>,
+      );
+      userEvent.click(screen.getByTestId('link-0'));
+      expect(history.location.state2.name).toEqual('Mexico');
+    });
+  });
+});
