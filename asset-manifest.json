@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/air-pollution/static/css/main.304b850b.chunk.css",
+    "main.js": "/air-pollution/static/js/main.6d6bdf77.chunk.js",
+    "main.js.map": "/air-pollution/static/js/main.6d6bdf77.chunk.js.map",
+    "runtime-main.js": "/air-pollution/static/js/runtime-main.4b74f215.js",
+    "runtime-main.js.map": "/air-pollution/static/js/runtime-main.4b74f215.js.map",
+    "static/js/2.ba04b733.chunk.js": "/air-pollution/static/js/2.ba04b733.chunk.js",
+    "static/js/2.ba04b733.chunk.js.map": "/air-pollution/static/js/2.ba04b733.chunk.js.map",
+    "index.html": "/air-pollution/index.html",
+    "static/css/main.304b850b.chunk.css.map": "/air-pollution/static/css/main.304b850b.chunk.css.map",
+    "static/js/2.ba04b733.chunk.js.LICENSE.txt": "/air-pollution/static/js/2.ba04b733.chunk.js.LICENSE.txt",
+    "static/media/Forecast.module.css": "/air-pollution/static/media/america-latina.f4a030a5.png",
+    "static/media/argentina.f16e3351.png": "/air-pollution/static/media/argentina.f16e3351.png",
+    "static/media/brazil.61fb8310.png": "/air-pollution/static/media/brazil.61fb8310.png",
+    "static/media/costaRica.e3ca476e.png": "/air-pollution/static/media/costaRica.e3ca476e.png",
+    "static/media/ecuador.756a6266.png": "/air-pollution/static/media/ecuador.756a6266.png",
+    "static/media/mexico.ffe76d9b.png": "/air-pollution/static/media/mexico.ffe76d9b.png",
+    "static/media/panama.de95de59.png": "/air-pollution/static/media/panama.de95de59.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b74f215.js",
+    "static/js/2.ba04b733.chunk.js",
+    "static/css/main.304b850b.chunk.css",
+    "static/js/main.6d6bdf77.chunk.js"
+  ]
+}
