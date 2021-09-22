@@ -48,9 +48,10 @@ const Forecast = () => {
       <div className={styles.stats}>AIR POLLUTION INDEX BY COUNTRY</div>
 
       <div id={styles.countries}>
-        {search(countries).map((obj) => (
+        {search(countries).map((obj, index) => (
           <div className={styles.container} key={uuidv4()}>
             <Link
+              data-testid={`link-${index}`}
               to={{
                 pathname: '/details',
                 state: {

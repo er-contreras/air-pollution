@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
-import { getAQIThunk } from '../components/apiManager';
+import { getAQIThunk } from './apiManager';
 import styles from '../styles/Details.module.css';
 
 const Details = () => {

@@ -1,7 +1,7 @@
 import './styles/App.css';
 import { Route, Switch } from 'react-router-dom';
 import Forecast from './components/Forecast';
-import Details from './pages/Details';
+import Details from './components/Details';
 
 function App() {
   return (
