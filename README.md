@@ -22,19 +22,23 @@ Mobile ScreenShots
 ## Getting Started
 
 ### Prerequisites
+
   - Read about [React](https://reactjs.org/docs/getting-started.html) before start.
   - Just follow the steps for Getting started, Asset Managment(optional), Output Management and Development (Install the webpack-dev-server)
 
 ### Setup
+
   - Better have [VS Code](https://code.visualstudio.com/) installed or install the source-code editor of your preference. 
 
 ### Install
+
   - In the terminal go to the folder you going to work and write the next. 
   ```
   git clone https://github.com/eri8-9/air-pollution.git
   ```
   - Next go to VS Code editor and open the folder where you installed the repository.
 ### Usage
+
   - Don't forget to create a branch to star working on the project.
   - Now that you have everything set up you are ready to work.
 
