@@ -15,11 +15,9 @@ Mobile ScreenShots
 
 - React & JavaScript
 
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://eri8-9.github.io/react-app/#/home)
-[Heroku](https://math-magicians-0.herokuapp.com/)
-[Netlify](https://eager-euclid-20253f.netlify.app/) -->
+[Live Demo Link](https://eri8-9.github.io/air-pollution/#/)
 
 ## Getting Started
 
