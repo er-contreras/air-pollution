@@ -9,7 +9,6 @@ const fetchForecast = async (lat, lon) => {
   return details;
 };
 
-// Apply the middleware.
 export const getAQIThunk = (lat, lon) => (dispatch) => {
   fetchForecast(lat, lon).then((response) => {
     dispatch(getDetails(Object.entries(response)));

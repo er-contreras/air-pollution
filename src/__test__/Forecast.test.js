@@ -2,15 +2,15 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Forecast from '../components/Forecast';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { HashRouter, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import userEvent from '@testing-library/user-event';
 
 const MockForecast = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Forecast />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
