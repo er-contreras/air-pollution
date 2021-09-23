@@ -1,0 +1,135 @@
+#searchContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: rgb(66, 106, 177);
+  padding: 0.5rem;
+}
+
+#input {
+  text-align: center;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+}
+
+::placeholder {
+  color: rgba(236, 236, 236, 0.792);
+}
+
+#countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reference {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(84, 136, 225);
+}
+
+.reference h2 {
+  max-width: 20rem;
+}
+
+.latinAmerica {
+  width: 10rem;
+  height: 10rem;
+  background-image: url('../maps/america-latina.png');
+  background-repeat: no-repeat;
+  background-size: 10rem;
+}
+
+.stats {
+  background-color: rgb(52, 84, 138);
+  color: white;
+  padding: 0.3rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: white;
+  padding: 0 0 2rem 0;
+}
+
+.countriesContainer,
+.countriesContainer2 {
+  min-height: 20rem;
+}
+
+.countriesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(65, 106, 175);
+  color: white;
+  padding: 0.8rem;
+}
+
+.countriesContainer h2,
+.countriesContainer2 h2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.countriesContainer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(62, 100, 165);
+  color: white;
+  padding: 0.8rem;
+}
+
+.country {
+  max-width: 70%;
+  color: white;
+}
+
+.btn {
+  width: 20rem;
+}
+
+.container {
+  display: flex;
+  max-width: 50%;
+}
+
+.micro,
+.cog {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.countryImg {
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+}
+
+.coord {
+  display: flex;
+  flex-direction: column;
+}
+
+.coord div,
+.capital div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.capital {
+  display: flex;
+  flex-direction: column;
+}
