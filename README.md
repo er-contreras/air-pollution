@@ -17,7 +17,7 @@ Mobile ScreenShots
 
 ## Live Demo
 
-[Live Demo Link](https://eri8-9.github.io/air-pollution/#/)
+[Live Demo Link](https://er-contreras.github.io/air-pollution/#/)
 
 ## Getting Started
 
@@ -42,9 +42,9 @@ Mobile ScreenShots
 
 👤 **Christian Erick Contreras**
 
-- GitHub: [@eri8-9](https://github.com/eri8-9)
-- Linkedin: [LinkedIn](https:linkedin.com/in/christian-erick-contreras-9945b820b)
-- Twitter: [@ChristianErick_](https://twitter.com/ChristianErick_)
+- GitHub: [@eri8-9](https://github.com/er-contreras)
+- Linkedin: [LinkedIn](https:linkedin.com/in/er-contreras)
+- Twitter: [@ChristianErick_](https://twitter.com/er_contreras_)
 
 ## Show your support
 
